@@ -1,10 +1,8 @@
 module.exports = {
   theme: {
     extend: {
-      colors: {
-        primary: "peru",
-      },
+      colors: {},
     },
   },
   plugins: [],
-};
+}

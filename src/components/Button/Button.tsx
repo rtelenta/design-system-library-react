@@ -1,32 +1,13 @@
-import { ButtonWrapper } from './styed'
-import 'twin.macro'
+import tw from 'twin.macro'
 
 export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
   primary?: boolean
-  /**
-   * What background color to use
-   */
   backgroundColor?: string
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large'
-  /**
-   * Button contents
-   */
+  size: 'small' | 'medium' | 'large'
   label: string
-  /**
-   * Optional click handler
-   */
   onClick?: () => void
 }
 
-/**
- * Primary UI component for user interaction
- */
 const Button: React.FC<ButtonProps> = ({
   primary = false,
   size = 'medium',
@@ -35,21 +16,25 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const mode = primary
-    ? 'storybook-button--primary'
-    : 'storybook-button--secondary'
+    ? tw`bg-blue-500 hover:bg-blue-700`
+    : tw`bg-green-500 hover:bg-green-700`
+
+  const sizes = {
+    small: tw`py-1 px-3 text-sm`,
+    medium: tw`py-2 px-4 text-base`,
+    large: tw`py-3 px-5 text-lg`,
+  }
+
   return (
-    <ButtonWrapper tw="hidden">
-      <button
-        type="button"
-        className={['storybook-button', `storybook-button--${size}`, mode].join(
-          ' '
-        )}
-        style={{ backgroundColor }}
-        {...props}
-      >
-        {label}
-      </button>
-    </ButtonWrapper>
+    <button
+      type="button"
+      tw="text-white font-bold  rounded-full"
+      css={[mode, sizes[size]]}
+      style={{ backgroundColor }}
+      {...props}
+    >
+      {label}
+    </button>
   )
 }
 

@@ -1,5 +1,6 @@
-import React from "react";
-import { GlobalStyles } from "twin.macro";
+import React from 'react'
+import showCodeByDefault from './showCodeByDefault'
+import { GlobalStyles } from 'twin.macro'
 
 export const decorators = [
   (Story) => (
@@ -8,14 +9,16 @@ export const decorators = [
       <Story />
     </>
   ),
-];
+]
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
     },
   },
-};
+}
+
+showCodeByDefault()
