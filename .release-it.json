@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "before:init": ["git pull", "git fetch --tags", "yarn build"],
+    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+  },
+  "git": {
+    "requireUpstream": false,
+    "requireCommits": true
+  }
+}

@@ -17,10 +17,20 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "outDir": "types",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationMap": true
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.stories.tsx",
+    "./src/setupTests.ts"
   ]
 }
