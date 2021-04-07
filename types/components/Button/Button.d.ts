@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import "twin.macro";
+import 'twin.macro';
 export interface ButtonProps {
     /**
      * Is this the principal call to action on the page?
@@ -12,7 +12,7 @@ export interface ButtonProps {
     /**
      * How large should the button be?
      */
-    size?: "small" | "medium" | "large";
+    size?: 'small' | 'medium' | 'large';
     /**
      * Button contents
      */
