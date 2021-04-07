@@ -1,6 +1,7 @@
 import React from 'react'
 import showCodeByDefault from './showCodeByDefault'
 import { GlobalStyles } from 'twin.macro'
+import '../src/storybook.css'
 
 export const decorators = [
   (Story) => (

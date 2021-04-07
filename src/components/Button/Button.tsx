@@ -3,7 +3,7 @@ import tw from 'twin.macro'
 export interface ButtonProps {
   primary?: boolean
   backgroundColor?: string
-  size: 'small' | 'medium' | 'large'
+  size?: 'small' | 'medium' | 'large'
   label: string
   onClick?: () => void
 }
@@ -16,8 +16,8 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const mode = primary
-    ? tw`bg-blue-500 hover:bg-blue-700`
-    : tw`bg-green-500 hover:bg-green-700`
+    ? tw`bg-primary hover:bg-primary-dark`
+    : tw`bg-secondary hover:bg-secondary-dark`
 
   const sizes = {
     small: tw`text-sm py-1 px-3`,
