@@ -22,7 +22,8 @@
     "test": "react-scripts test",
     "build-storybook": "build-storybook -s public",
     "clean": "rimraf build && rimraf types",
-    "release": "release-it --git.requireBranch=master --only-version",
+    "pub": "release-it --git.requireBranch=master --only-version",
+    "release": "npm run pub",
     "prebuild": "yarn clean"
   },
   "eslintConfig": {

@@ -20,9 +20,9 @@ const Button: React.FC<ButtonProps> = ({
     : tw`bg-green-500 hover:bg-green-700`
 
   const sizes = {
-    small: tw`py-1 px-3 text-sm`,
-    medium: tw`py-2 px-4 text-base`,
-    large: tw`py-3 px-5 text-lg`,
+    small: tw`text-sm py-1 px-3`,
+    medium: tw`text-base py-2 px-4`,
+    large: tw`text-lg py-3 px-5`,
   }
 
   return (
